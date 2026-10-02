@@ -1,6 +1,6 @@
-# feature-flag-service
+# orb-operator-reconciler
 
-把功能开关的定义、目标环境、灰度比例、生效时间窗口和变更历史记录成可查询的服务，支持按环境和标记评估开关状态并追溯配置变更。
+把自定义资源的目标期望状态、协调轮次、条件项与最终收敛状态记录成可查询的服务，支持按资源类型和命名空间回放协调过程并定位未收敛的原因。
 
 ## 运行要求
 
@@ -20,7 +20,7 @@ go run .
 | 变量 | 默认值 | 用途 |
 |---|---|---|
 | `ADDR` | `127.0.0.1:8080` | HTTP 监听地址 |
-| `DB_PATH` | `feature-flag-service.db` | SQLite 数据库文件路径 |
+| `DB_PATH` | `orb-operator-reconciler.db` | SQLite 数据库文件路径 |
 
 ## 已公开的入口
 
